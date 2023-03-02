@@ -16,7 +16,9 @@ public class Methods {
 	public static double distanceBetween(double x1, double y1, double x2, double y2) {
 		double distance = 0;
 		// FIXME: Hint use Math methods (e.g. Math.sqrt) to compute the distance
+		double a = Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2);
 		
+		distance = Math.sqrt(a);
 		return distance;
 	}
 
@@ -60,12 +62,24 @@ public class Methods {
 	 *         characters in the source String with the replacement String
 	 */
 	public static String substituteAll(String source, char target, String replacement) {
+		
 		String result = "";
 		// TODO: Finish this method
 		
-		return result;
+		
+		for(int i = 0; i < source.length(); i++)
+		{
+		if (source.charAt(i) == target) 
+		{
+		result = result + replacement;
 	}
-
+		else
+		{
+			result = result + source.charAt(i);
+		}
+		}
+		return result;
+		}
 	/**
 	 * Compute the sum of elements in an array
 	 * 
